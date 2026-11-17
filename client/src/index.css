@@ -1,0 +1,124 @@
+/* Modern System Design Tokens & Typography */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Surfaces & Canvas */
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-sidebar: #0f172a;
+  --bg-subtle: #f1f5f9;
+  --bg-hover: #f8fafc;
+
+  /* Borders */
+  --border-subtle: #f1f5f9;
+  --border-default: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --border-focus: #2563eb;
+
+  /* Text Hierarchy */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-faint: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* Brand / Primary */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-active: #1e40af;
+  --primary-tint: #eff6ff;
+  --primary-border: #bfdbfe;
+
+  /* Severity Impact Tokens */
+  --critical-text: #991b1b;
+  --critical-bg: #fef2f2;
+  --critical-border: #fecaca;
+  --critical-badge: #fee2e2;
+
+  --serious-text: #9a3412;
+  --serious-bg: #fff7ed;
+  --serious-border: #ffedd5;
+  --serious-badge: #fed7aa;
+
+  --moderate-text: #92400e;
+  --moderate-bg: #fffbeb;
+  --moderate-border: #fef3c7;
+  --moderate-badge: #fde68a;
+
+  --minor-text: #475569;
+  --minor-bg: #f8fafc;
+  --minor-border: #e2e8f0;
+  --minor-badge: #f1f5f9;
+
+  --success-text: #15803d;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background-color: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  color: var(--text-secondary);
+}
+
+/* Crisp Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus Outline Accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
